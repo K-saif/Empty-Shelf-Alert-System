@@ -5,6 +5,30 @@ __pycache__/
 
 # C extensions
 *.so
+*.txt
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.bmp
+*.tiff
+*.svg
+*.ico
+
+*.zip
+*.tar.gz
+
+*.csv
+*.json
+*.xml
+*.yaml
+*.yml
+*.db
+*.sqlite3
+*.log
+
+*.pt
+*.cache
 
 # Distribution / packaging
 .Python
