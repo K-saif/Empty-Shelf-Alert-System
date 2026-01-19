@@ -1,4 +1,4 @@
-# 🛒 Retail Shelf Stock & Empty Space Detection (YOLO11)
+# Retail Shelf Stock & Empty Space Detection (YOLO11)
 
 ## 📌 Overview
 This project presents a **production-ready retail shelf analytics system** that detects **products and empty shelf spaces** using a unified YOLO11-based object detection model.
