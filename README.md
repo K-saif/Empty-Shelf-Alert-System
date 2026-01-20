@@ -48,7 +48,7 @@ This project uses a **hybrid dataset construction approach** to enable robust em
 - Contains only **empty shelf annotations**
 
 ### 3️⃣ Weakly-Supervised Relabeling (Core Contribution)
-To unify both datasets:
+To unify both datasets: **run save_label.py**
 1. Pretrained product YOLO11 model is run on empty shelf images  
 2. Detected products are auto-saved as YOLO labels  
 3. Final class mapping:
