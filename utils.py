@@ -1,5 +1,6 @@
 from ultralytics import YOLO
 import cv2
+import numpy as np
 
 def calculate_area(results):
 
@@ -58,7 +59,7 @@ def extract_row_boxes(seg_res, img):
     """Extract bounding boxes from segmentation masks and return filtered row boxes sorted top→bottom."""
     row_masks = seg_res.masks
     if row_masks is None:
-        raise RuntimeError("No row masks detected.")
+        return None
 
     orig_h, orig_w = img.shape[:2]
     boxes = []
@@ -72,7 +73,7 @@ def extract_row_boxes(seg_res, img):
         boxes.append((x1, y1, x2, y2))
 
     if not boxes:
-        raise RuntimeError("No valid row boxes extracted.")
+        return None
 
     # Filter out narrow noisy rows
     widths = [(x2 - x1) for (x1, y1, x2, y2) in boxes]
@@ -98,6 +99,8 @@ def extract_row_boxes(seg_res, img):
 # =========================
 def extract_empty_boxes(det_res):
     """Extract bounding boxes where class = 0 (empty slot)."""
+    if det_res.boxes is None:
+        return None
     empty = []
     for box in det_res.boxes:
         if int(box.cls[0]) == 0:  # class 0 = empty space
