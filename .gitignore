@@ -3,7 +3,16 @@ __pycache__/
 *.py[codz]
 *$py.class
 
-!/Results/**
+# === ALLOW RESULTS ===
+!Results/
+!Results/**
+!Results/**/*.jpg
+!Results/**/*.jpeg
+!Results/**/*.png
+!Results/**/*.gif
+!Results/**/*.bmp
+!Results/**/*.tiff
+
 # C extensions
 *.so
 *.txt
