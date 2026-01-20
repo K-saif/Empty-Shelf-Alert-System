@@ -106,7 +106,7 @@ if __name__ == "__main__":
                             timestamp,
                             row_idx + 1,
                             empty_count,
-                            empty_area
+                            round(float(empty_area), 4)
                         ])
 
                 print("✔ Inference logged at:", timestamp)
