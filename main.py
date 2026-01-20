@@ -9,8 +9,8 @@ from utils import calculate_area, extract_empty_boxes, extract_row_boxes, map_em
 # =========================
 # CONFIG
 # =========================
-DET_MODEL_PATH = "/home/medprime/Music/Product-Detection-System/11n_b2/weights/best.pt"
-SEG_MODEL_PATH = "/home/medprime/Music/Product-Detection-System/row_11n_b25/weights/best.pt"
+DET_MODEL_PATH = "./11n_b2/weights/best.pt"
+SEG_MODEL_PATH = "./row_11n_b25/weights/best.pt"
 OUTPUT_VIDEO   = "./output_result.mp4"
 OUTPUT_CSV     = "./results.csv"
 
