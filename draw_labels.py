@@ -1,10 +1,12 @@
+# To visualize images with labels draw by model
+
 import cv2
 import os
 from pathlib import Path
 
-IMAGE_DIR = "/home/gpu2/Pictures/temp/data/val/images/"
-LABEL_DIR = "/home/gpu2/Pictures/temp/data/val/labels"
-OUTPUT_DIR = "/home/gpu2/Pictures/temp/data/val/vis/"
+IMAGE_DIR = "/images/"
+LABEL_DIR = "/labels"
+OUTPUT_DIR = "/visualize/"
 
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
