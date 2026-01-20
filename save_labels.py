@@ -1,11 +1,13 @@
+# To save labels by using trained model
+
 from ultralytics import YOLO
 import os
 from pathlib import Path
 
 # ---- SETTINGS ----
 MODEL_PATH = "best.pt"                   # your trained model
-IMAGE_DIR = "/home/gpu2/Pictures/temp/data/train/images/"                    # folder containing input images
-OUTPUT_LABEL_DIR = "/home/gpu2/Pictures/temp/data/train/labels"        # folder to store .txt labes
+IMAGE_DIR = "/images/"                    # folder containing input images
+OUTPUT_LABEL_DIR = "/labels"        # folder to store .txt labes
 
 # create output directory if not exists
 os.makedirs(OUTPUT_LABEL_DIR, exist_ok=True)
