@@ -9,10 +9,10 @@ from utils import calculate_area, extract_empty_boxes, extract_row_boxes, map_em
 # =========================
 # CONFIG
 # =========================
-DET_MODEL_PATH = "./11n_b2/weights/best.pt"
-SEG_MODEL_PATH = "./row_11n_b25/weights/best.pt"
-OUTPUT_VIDEO   = "./output_result.mp4"
-OUTPUT_CSV     = "./results.csv"
+DET_MODEL_PATH = "./Models/detect_product_empty_space.pt"
+SEG_MODEL_PATH = "./Models/segment_shelf_rows.pt"
+OUTPUT_VIDEO   = "./Output_result.mp4"
+OUTPUT_CSV     = "./Results/Monitoring_results.csv"
 
 # =========================
 # ARG PARSER
