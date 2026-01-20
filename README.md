@@ -65,29 +65,6 @@ This approach avoids manual relabeling and closely mimics **real-world industria
 
 ---
 
-## 🏗 Model Architecture
-- **Model**: YOLO11
-- **Task**: Object Detection
-- **Classes**: 2 (Empty Space, Product)
-- **Input**: Shelf images from supermarkets
-- **Output**: Bounding boxes + class labels
-
----
-
-## 🧪 Training Pipeline
-1. Train YOLO11 on SKU product dataset
-2. Infer products on empty shelf dataset
-3. Auto-generate product annotations
-4. Merge datasets into a single YOLO format
-5. Retrain YOLO11 on combined dataset
-
-This pipeline enables:
-- Better generalization
-- Robust empty shelf detection
-- Reduced annotation cost
-
----
-
 ## 📊 Applications
 - Automated shelf monitoring
 - Out-of-stock detection
@@ -99,33 +76,6 @@ This pipeline enables:
 
 ## ⚙️ Deployment Ready
 - Real-time inference supported
-- Optimized for edge devices:
-  - NVIDIA Jetson
-  - Low-power GPUs
 - Easily integrable with REST APIs
 
 ---
-
-## 📂 Repository Structure
-```bash
-retail-shelf-detection/
-│
-├── data/
-│   ├── sku_products/
-│   ├── empty_shelves_raw/
-│   ├── combined_dataset/
-│
-├── training/
-│   ├── train_yolo11.py
-│
-├── inference/
-│   ├── detect_products.py
-│
-├── models/
-│   ├── yolo11_weights/
-│
-├── utils/
-│   ├── label_generator.py
-│
-├── README.md
-└── requirements.txt
